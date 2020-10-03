@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="240"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\MARCELO\\Documents\\NetBeansProjects\\ST2\\src\\REPORTS\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select * from Servicio]]>
+	</queryString>
+	<field name="FechaEntrega" class="java.lang.String"/>
+	<field name="idServicio" class="java.lang.Integer"/>
+	<field name="FechaRecibido" class="java.lang.String"/>
+	<field name="idVenta" class="java.lang.Integer"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="78">
+			<image>
+				<reportElement x="434" y="0" width="121" height="49"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\MARCELO\\Documents\\NetBeansProjects\\ST2\\src\\WALLPAPERS\\RESETPERU.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="11" y="49" width="499" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="14" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[FICHA DE SOPORTE TÉCNICO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="79">
+			<textField>
+				<reportElement x="10" y="49" width="200" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{FechaRecibido}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="29" width="200" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[FECHA DE RECIBIDO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="49" width="200" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{FechaEntrega}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="49" width="110" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{idVenta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="210" y="29" width="200" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[FECHA DE ENTREGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="29" width="110" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[NÚMERO DE VENTA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="339">
+			<staticText>
+				<reportElement x="10" y="10" width="500" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL TÉCNICO ENCARGADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="66" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="46" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[idEmpleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="46" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="66" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="113" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[Tienda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="133" width="500" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EQUIPO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="42"/>
+	</summary>
+</jasperReport>
